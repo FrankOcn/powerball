@@ -62,7 +62,7 @@ while not jackpot or not stopOnJackpot:
         if np <= 1:
             adjustedWon = "Net won (split): {:,}".format(won - spent)
         else:
-            adjustedWon = "Net won (split): {:,}".format(((won - spent) - grandPrize) / np)
+            adjustedWon = "Net won (split): {:,}".format((won - spent - grandPrize) + (grandPrize / np))
 
         print("----JACKPOT----")
         print(netWon)
