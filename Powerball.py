@@ -12,7 +12,7 @@ ticketPNum = 1;
 balls = tuple(range(1, 70))
 powerballs = tuple(range(1, 27))
 
-        # prize money will be looked up from a diction`ary
+# prize money will be looked up from a dictionary
 prizes = {(0, False): 0,
           (1, False): 0,
           (2, False): 0,
@@ -51,8 +51,8 @@ while not jackpot or not stopOnJackpot:
         results = "spent: {:,}, won: {:,}, net: {:,}".format(spent, won, won - spent)
         print(results)
 
-    # given a large sample size, n number of tickets bought, p probability of a winning ticket
-    # the expected number of people who wins the jackpot is given by E(X) = np
+    # Given n independent, equally likely events with p probability of occurring:
+    # Expected value given by np (  E(X) = np   )
     if jackpot:
         ticketsBought = spent / 2
         np = int(round(ticketsBought / jackpotOdds));
